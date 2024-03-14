@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+$bg:black;
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $bg;
+    padding: 1rem 2rem;
+    img{
+        width: 125px;
+        object-fit: contain;
+    }
+    div{
+        width: 100%;
+        margin-left: 4vmax;
+        a{
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.2           s;
+            &:hover{
+                color: grey;
+                border-bottom: 1px solid red;
+            }
+        }
+    }
+    svg{
+        color: white;
+        font-size: 1.3rem;
+        &:hover{
+            color: grey;
+            cursor: pointer;
+        }
+    }
+    // position: relative;
+}
+.navToggle{
+    display: block;
+}
+.show{
+    display: block;
+}
+
+.inputParent{
+    // display: none;
+    // border: 2px solid green;
+    position: absolute;
+    right: 1rem;
+    // top: 1rem;
+    transform: translateY(1rem);
+    input{
+        font-size: 1.1rem;
+        border: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        // background-color: rgb(159, 159, 159);
+        color: rgb(0, 0, 0);
+        outline: none;
+        padding: 3px 8px;
+        width: 15em;
+    }button{
+        background-color: green;
+        padding: 2.2px 1rem;
+        font-size: 1.2rem;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border: none;
+        cursor: pointer;
+        svg{
+            transform: translateY(3px);
+        }
+    }
+}
+.banner {
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    @media screen and (max-width:780px) {
+        height: 300px;
+    }
+    box-shadow: 0px -29px 23px -8px black inset;
+    .overview{
+        width: 80%;
+        position: relative;
+        left: 1rem;
+        top: 7rem;
+        @media screen and (max-width:780px){
+            top: 2.5rem;
+            p{
+                font-size: 0.8rem;
+            }div{
+                button{
+                    font-size: 0.5rem;
+                }
+            }
+        }
+        @media screen and (max-width: 480px){
+            width: 95%;
+            left: 0.5rem;
+            top: 7rem;
+            p{
+                width: 90%;
+                height: 2.4rem;
+                line-height: 13px;
+                overflow: hidden;
+                text-overflow:ellipsis;
+                &:nth-child(2){
+                    margin-top: 0.5rem;
+                }
+            }
+            h1{
+                font-size: 1.7rem;
+            }
+            
+
+        }
+        div{
+            position: relative;
+            top: 3rem;
+            @media screen and (max-width:780px) {
+                top: 1rem;
+                // left: 0.5rem;
+            }
+            button{
+                font-size: 1.5rem;
+                background-color: red;
+                border: none;
+                padding: 2px 1rem;
+                cursor: pointer;
+                @media screen and (max-width:480px){
+                    font-size: 1rem;
+                }
+                &:active{
+                    background-color: white;
+                    color: black;
+                }
+                i{
+                    transform: translateY(2px);
+                    
+                }&:nth-child(2){
+                    background-color: rgb(253, 255, 253);
+                    color: black;
+                    margin-left: 1rem;
+                    &:active{
+                        background-color: red;
+                        color: white;
+                    }
+                    i{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.menuIcon{
+    display: none;
+    font-size: 1.5rem;
+}
+@media screen and (max-width:781px){
+    .searchIcon{
+        display: none;
+    }#menuList{
+        display: none;
+    }
+}
+@media screen and (max-width:781px){
+    .menuIcon{
+        display: block;
+    }.poster{
+        width: 4rem;
+    }
+}
+
+.row{
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    // padding: 1rem;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+}
+.imgContainer{
+    margin-top: 2rem;
+    @media screen and (max-width:780px){
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.rowContainer{
+    background-color: $bg;
+    padding:0px 2rem;
+    padding-top: 3rem;
+    @media screen and (max-width:780px){
+        padding-top: 0;
+        padding:0px 0.9rem;
+    }
+    h2{
+        @media screen and (max-width:480px){
+            font-size: 1.2rem;
+        }
+    }
+}
+.poster{
+    transition: all 0.1s;
+    width: 9rem;
+    cursor: pointer;
+    
+    @media screen and (max-width:780px){
+        width: 7rem;
+    }
+    @media screen and (max-width:480px){
+        width: 4rem;
+    }
+    &:hover{
+        transform:translateY(-10px) ;
+        
+    }
+}
+.hello{
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    // margin: 1rem 0;
+    padding: 0rem 0;
+    background-color: grey;
+    @media screen and (max-width:480px){
+        font-size: 1rem;
+        padding: 0;
+        .genreTags{
+            padding: 0;
+        }
+    }
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    .genreTags{
+        // color: black;
+        background-color: $bg;
+        border-radius: 5px;
+        padding: 5px 1rem;
+        margin: 0px 1rem;
+        // min-width: 5rem;
+        transition: all 0.3s;
+        cursor: pointer;
+        @media screen and (max-width:480px){
+            margin: 0.2rem;
+            font-size: 0.5rem;
+        };
+        @media screen and (max-width:780px){
+            font-size: 0.7rem;
+        }
+        &:hover{
+            background-color: rgb(167, 10, 10);
+        }
+    }
+}
+.countriesParent{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        color: rgb(255, 255, 255);
+        background-color: green;
+        padding: 5px 1rem;
+        margin: 0.5rem 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(158, 33, 33);
+
+        }
+
+    }
+}
+.languagesParent{
+    display: flex;
+    flex-wrap: wrap;
+    div{
+        padding: 5px 1rem;
+        margin: 0.5rem 1rem;
+        background-color: purple ;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(241, 34, 220);
+        }
+    }
+}
